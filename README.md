@@ -22,10 +22,19 @@ This document describes how to:
   - Allow HTTPS traffic
 - Security:
   - Add SSH key
+  - Set up SSH from your terminal
+  ```bash
+  gcloud compute ssh VM_SERVER_NAME@VM_NAME --zone VM_ZONE 
+  ```
+  - Open SSH key file
+  ```bash
+  cat ~/.ssh/google_compute_engine.pub
+  ```
+  - Paste the serverSSH key to the server
 
 ### Connect to Server
 ```bash
-ssh -i ~/.ssh/file_name server@0.0.0.0
+ssh -i ~/.ssh/google_compute_engine LOCAL-USERNAME@0.0.0.0
 ```
 
 ---
